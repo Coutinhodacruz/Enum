@@ -29,6 +29,7 @@ return(
               appearance: "none",
               width:'100px',
               cursor: "pointer",
+
             }}
             accept="image/*"
             onChange={handleImageUpload}

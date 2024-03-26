@@ -56,7 +56,7 @@ const MainContent = ({ content }) => {
         <EmptySpace
         callToActionText={
           content === "Cohorts"
-            ? "No Cohort has been created yet. Let's get you started by clicking the button below"
+            ? "No Cohort has been created yet. Let's get you clicking the button below"
             : content === "Programs"
             ? "No Program has been created yet. Let's get you started by clicking the button below"
             : content === "Instructors"

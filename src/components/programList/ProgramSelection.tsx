@@ -23,18 +23,15 @@ interface Program {
 const ProgramSelection:React.FC<ProgramSelectionProps> = ({ programs, value, onChange }) => {
   return (
     <>
-    {programs && programs.length > 0 ? (
+    {/*{programs && programs.length > 0 ? (*/}
     <Select autoComplete='' className="w-[381px]" value={value} name="program" onChange={onChange}>
-      {programs.map((program) => (
+      {/*{programs.map((program) => (*/}
         
-        <MenuItem key={program.id} value={program}>
-          {program}
+        <MenuItem value={'timo'}>
+         hghg
         </MenuItem>
-      ))}
-    </Select>):(
-      <div>No Programs Avaliable yet...</div>
-    )
-  }
+      {/*))}*/}
+    </Select>
   </>
   );
 };

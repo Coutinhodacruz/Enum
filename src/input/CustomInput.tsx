@@ -26,7 +26,7 @@ const Input: React.FC<InputProps> =({icon,placeHolder,type,style,value,name,acce
 }
 const CustomInput:React.FC<InputProps> = ({icon,placeHolder,type,style,value,name,accept,max,min,onChange})=>{
     return(
-    <Input icon={icon} placeHolder={placeHolder} type={type} style={style} max={max} min={min} accept={accept} name={name} value={value} onChange={onChange}/>
+    <Input icon={icon} placeHolder={placeHolder} type={type} style={style} max={max} min={min} accept={accept} name={name} value={value}  onChange={onChange}/>
     )
 }
 export default CustomInput;

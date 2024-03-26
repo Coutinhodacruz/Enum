@@ -26,7 +26,6 @@ const Button: React.FC<ButtonProps> = ({ icons, text, style, onClick ,isDisabled
 };
 
 
-    
     const CustomButton: React.FC<ButtonProps> = ({  icons, text, style, onClick,isDisabled }) => {
       return (
         <Button icons={icons} text={text} style={style} onClick={onClick} isDisabled={isDisabled} />
