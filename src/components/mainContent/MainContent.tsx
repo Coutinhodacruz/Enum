@@ -45,7 +45,7 @@ const MainContent = ({ content }) => {
 
   return (
     <div className="absolute  p  w-62 justify-center items-center  md:w-9/12 h-[325px]  md:bottom-[55px] md:left-56">
-      <div className=" text-lg font-bold font-serif w-[89px] h-[31px] hidden md:block">{content}</div>
+      <div className=" text-lg font-bold font-serif w-[90px] h-[31px] hidden md:block">{content}</div>
       {/*{content === "Cohorts"  ? (*/}
       {/*  <CohortDashBoard*/}
       {/*    clicked={isCohortClicked}*/}

@@ -44,7 +44,7 @@ const CreateCohortModal: React.FC<{
     description: "",
     startDate: new Date(),
     endDate: new Date(),
-    program: "API",
+    program: "",
     imageUrl: "",
   
   });

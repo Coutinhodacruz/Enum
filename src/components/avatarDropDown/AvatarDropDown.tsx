@@ -11,7 +11,10 @@ const AvatarDropDown = () => {
                 <option value="value 4">Oyewole</option>
             </select>
         </div>
+        
     );
 };
 
 export default AvatarDropDown;
+
+
