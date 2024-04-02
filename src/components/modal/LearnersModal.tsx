@@ -183,7 +183,7 @@ const LearnersModal: React.FC<{
                   onChange={handleInputChange}
                   value={cohortData.startDate}
                   name="startDate"
-                  style={DateInputStyle}
+                  style={DateInputStyle} n
                   min={new Date().toISOString().split("T")[0]}
                   max={new Date().toISOString().split("T")[1]}
                   icon={undefined}

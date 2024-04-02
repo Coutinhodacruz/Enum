@@ -6,7 +6,7 @@ export const AllProgramsApi = createAsyncThunk(
     "programs/AllProgramsApi",
     async (_, { rejectWithValue }) => {
         try {
-            const token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJpc3MiOiJFbnVtIiwiZXhwIjoxNzExNjE3MjgxfQ.Op4k1YfiHEROfUhgrGc9sCsCWn-aiqhXSkr1XNSQWb4eTB4uRGFiCqGAZpKDqClbRNSUBZ8ZGvRBQ_lmF68UwQ";
+            const token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJpc3MiOiJFbnVtIn0.aNaQX6099P1v9E67yUfxznob9bAQDWDWhEUCRgrgMKDxUMqZAEsYVIWJji3VwgrWaDrtQNNWpHjgpF8mgobEHg";
             const response = await axios.get(AllProgramsUrl, {
                 method: "GET",
                 headers: {

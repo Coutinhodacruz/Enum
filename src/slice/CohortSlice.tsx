@@ -35,7 +35,7 @@ const CohortSlice = createSlice({
       .addCase(CreateCohortApi.fulfilled, (state, action) => {
         state.cohortData.push(action.payload);
         console.log('paylaod to back-->',action.payload)
-      })     
+      })
   },
 },
 );

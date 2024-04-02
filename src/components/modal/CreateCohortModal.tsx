@@ -49,6 +49,8 @@ const CreateCohortModal: React.FC<{
   
   });
 
+  const [imageFile, setImageFile] = useState(null);
+
   const reset = () => {
     setCohortData({
       cohortName: "",
@@ -100,9 +102,15 @@ const CreateCohortModal: React.FC<{
   };
 
   const handleButtonClick = () => {
-    
-    // dispatch(CreateCohort(updatedCohortData));
-    dispatch(createCohort(cohortData));
+    const formData = new FormData();
+    formData.append("cohortName", cohortData.cohortName);
+    formData.append("description", cohortData.description);
+    formData.append("program", cohortData.program);
+    formData.append("file", imageFile);
+    formData.append("startDate", cohortData.startDate.toString());
+    formData.append("endDate", cohortData.endDate.toString());
+    dispatch(CreateCohortApi(formData));
+    // dispatch(createCohort(cohortData));
     closeModal();
     reset();
   };
@@ -136,6 +144,7 @@ const CreateCohortModal: React.FC<{
         ...prev,
         imageUrl: result,
       }));
+      setImageFile(file);
     };
 
     reader.readAsDataURL(file);
