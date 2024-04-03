@@ -16,10 +16,8 @@ import { CreateCohortApi } from "@/fetchData/CreateCohortApiFetch";
 import { AllProgramsApi } from "@/fetchData/AllPrograms";
 import ProgramSelection from "../programList/ProgramSelection";
 import UploadImage from "../uploadImage/UploadImage";
-import { CreateCohortModalStyle,SmallScreenModalStyle } from "./modalStyle/CreateCohortModalStyle";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { createCohort } from "@/slice/CohortSlice";
 
 
 interface CohortData {

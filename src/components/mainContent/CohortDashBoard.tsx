@@ -1,8 +1,5 @@
 import CustomInput from "@/input/CustomInput";
-import { AppDispatch, RootState } from "@/store/Store";
-import { useDispatch, useSelector } from "react-redux";
 import { LuSearch } from "react-icons/lu";
-
 import Picture from "@/assets/Picture";
 import CustomButton from "../button/Button";
 import createCohortStyles from "../button/buttonStyles/CreateCohortStyles";
@@ -11,16 +8,13 @@ import { HiOutlineDotsVertical } from "react-icons/hi";
 import MoreActionButtonStyles from "../button/buttonStyles/MoreAction";
 import CohortAvatarStyle from "@/assets/style/CohortAvatarStyle";
 import { useEffect, useState } from "react";
-
 import axios from "axios";
 import { ViewAllCohortUrl } from "@/assets/urls/urls";
-import EmptySpace from "../emptySpace/EmptySpace";
+
 
 
 const CohortDashBoard = ({ handleOpen, clicked, handleClose }) => {
-  // const cohortData = useSelector(
-  //   (state: RootState) => state.cohortData.cohortData
-  // );
+
  const [cohortData,setCohortData] = useState([]);
 //  const dispatch = useDispatch<AppDispatch>();
 

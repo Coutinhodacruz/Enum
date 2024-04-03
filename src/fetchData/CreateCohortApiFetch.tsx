@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { RootState } from "@/store/Store";
 import { CreateCohortUrl } from "@/assets/urls/urls";
 
 export const CreateCohortApi = createAsyncThunk(

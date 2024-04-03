@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import Picture from "@/assets/Picture";
-import CustomButton from "../button/Button";
-import { IoAddCircleOutline } from "react-icons/io5";
-import createCohortStyles from "../button/buttonStyles/CreateCohortStyles";
-import CreateCohortModal from "../modal/CreateCohortModal";
-import CreateProgramModal from "../modal/CreateProgramModal"; // Import your CreateProgramModal
 import CohortDashBoard from "./CohortDashBoard";
 import EmptySpace from "../emptySpace/EmptySpace";
 import { useSelector } from "react-redux";

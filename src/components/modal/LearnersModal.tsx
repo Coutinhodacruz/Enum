@@ -80,6 +80,7 @@ const LearnersModal: React.FC<{
     reset();
   };
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+
     event.preventDefault();
   };
 
