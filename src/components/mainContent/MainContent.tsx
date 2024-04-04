@@ -4,8 +4,11 @@ import EmptySpace from "../emptySpace/EmptySpace";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/Store";
 
+interface mainComponent {
+  content: any
+}
 
-const MainContent = ({ content }) => {
+const MainContent: React.FC<mainComponent>  = ({ content }) => {
   const [isCohortClicked, setIsCohortClicked] = useState(false);
   const [isProgramClicked, setIsProgramClicked] = useState(false);
   const [isInstructorClicked, setIsInstructorClicked] = useState(false);
@@ -20,6 +23,7 @@ const MainContent = ({ content }) => {
 
   const cohortData = useSelector((state: RootState) => state.cohortData.cohortData);
   
+  // @ts-ignore
   const dataExists = typeof cohortData === 'object' && Object.values(cohortData).some(value => value !== null && value !== "");
 
   

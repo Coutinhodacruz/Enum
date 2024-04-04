@@ -7,6 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   isDisabled:boolean;
 
+
 }
 
 const Button: React.FC<ButtonProps> = ({ icons, text, style, onClick ,isDisabled}) => {

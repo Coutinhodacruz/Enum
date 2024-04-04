@@ -14,16 +14,26 @@ import { ViewAllCohortUrl } from "@/assets/urls/urls";
 interface CohortDashBoardProps {
     handleOpen:any,
     clicked: boolean,
-    handleClose: any
+    handleClose: any,
 }
+
+interface CohortData {
+    cohortName: string;
+    program: string;
+    startDate: string;
+    CohortAvatarUrl: string;
+}
+
 
 const CohortDashBoard: React.FC<CohortDashBoardProps>  = ({ handleOpen, clicked,  handleClose }) => {
 
- const [cohortData,setCohortData] = useState([]);
+    const [cohortData, setCohortData] = useState<CohortData[]>([]);
+
 //  const dispatch = useDispatch<AppDispatch>();
 
 
-const dataExists = typeof cohortData === 'object' && Object.values(cohortData).some(value => value !== null && value !== "");
+
+    const dataExists = typeof cohortData === 'object' && Object.values(cohortData).some(value => value !== null );
 
  useEffect( ()=>{
   const fetchCohort = async ()=>{
@@ -46,7 +56,9 @@ const dataExists = typeof cohortData === 'object' && Object.values(cohortData).s
  },[] )
 
 
-  return (
+  // @ts-ignore
+    // @ts-ignore
+    return (
     <>
    {/*{cohortData && cohortData.length > 0 ? (*/}
     <div className="w-[300px] md:w-full md:text-blue border ">
