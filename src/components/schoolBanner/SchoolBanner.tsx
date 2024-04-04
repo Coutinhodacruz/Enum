@@ -20,7 +20,7 @@ const SchoolBanner = () => {
         </div>
         <CustomButton 
           text="View Profile"
-          icons={[<GoArrowRight />]}
+          icons={<GoArrowRight />}
           style={viewProfileStyles}
           isDisabled={false}
         />

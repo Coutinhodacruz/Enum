@@ -196,7 +196,7 @@ const CreateCohortModalStyle = {
             Create a Cohort
             <CustomButton
               text={""}
-              icons={[<CloseIcon />]}
+              icons={<CloseIcon />}
               onClick={closeModal}
               style={{ cursor: "pointer" }}
               isDisabled={false}

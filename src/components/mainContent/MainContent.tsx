@@ -4,6 +4,7 @@ import EmptySpace from "../emptySpace/EmptySpace";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/Store";
 
+
 const MainContent = ({ content }) => {
   const [isCohortClicked, setIsCohortClicked] = useState(false);
   const [isProgramClicked, setIsProgramClicked] = useState(false);

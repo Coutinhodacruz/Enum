@@ -7,13 +7,17 @@ import CreateCohortModal from "../modal/CreateCohortModal";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import MoreActionButtonStyles from "../button/buttonStyles/MoreAction";
 import CohortAvatarStyle from "@/assets/style/CohortAvatarStyle";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { ViewAllCohortUrl } from "@/assets/urls/urls";
 
+interface CohortDashBoardProps {
+    handleOpen:any,
+    clicked: boolean,
+    handleClose: any
+}
 
-
-const CohortDashBoard = ({ handleOpen, clicked, handleClose }) => {
+const CohortDashBoard: React.FC<CohortDashBoardProps>  = ({ handleOpen, clicked,  handleClose }) => {
 
  const [cohortData,setCohortData] = useState([]);
 //  const dispatch = useDispatch<AppDispatch>();
@@ -34,7 +38,7 @@ const dataExists = typeof cohortData === 'object' && Object.values(cohortData).s
     setCohortData(response.data)
     console.log('response ---->', response.data)
   }
-  catch(e:(e)){
+  catch(e:any){
     console.log(e.error)
   }}
   fetchCohort()
@@ -64,7 +68,7 @@ const dataExists = typeof cohortData === 'object' && Object.values(cohortData).s
                 style={createCohortStyles}
                 onClick={handleOpen} isDisabled={false}        />
           <CustomButton
-                icons={[<HiOutlineDotsVertical />]}
+                icons={<HiOutlineDotsVertical />}
                 text={"More Actions"}
                 style={MoreActionButtonStyles} isDisabled={false}       />
         </div>
@@ -84,7 +88,7 @@ const dataExists = typeof cohortData === 'object' && Object.values(cohortData).s
 
                 <div className="flex flex-col gap-2 ">
                 <div className="font-black">{item.cohortName}</div>
-                <div>{item.program}</div>
+                <div >{item.program}</div>
                 </div>
                 </div>
                 <div className="flex justify-center items-center gap-8 pr-7">

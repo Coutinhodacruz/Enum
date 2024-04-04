@@ -129,7 +129,7 @@ const LearnersModal: React.FC<{
             Add Learners
             <CustomButton
               text={""}
-              icons={[<CloseIcon />]}
+              icons={<CloseIcon />}
               onClick={closeModal}
               style={{ cursor: "pointer" }}
               isDisabled={false}
