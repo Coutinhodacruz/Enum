@@ -198,7 +198,7 @@ const CreateCohortModalStyle = {
         aria-describedby="modal-modal-description"
       >
         <Box sx={isSmallScreen ? SmallScreenModalStyle : CreateCohortModalStyle}>
-          <div className="flex flex-row justify-between font-bold text-2xl">
+          <div className="justify-between font-bold text-2xl">
             Create a Cohort
             <CustomButton
               text={""}
@@ -208,7 +208,7 @@ const CreateCohortModalStyle = {
               isDisabled={false}
             />
           </div>
-          <div className="flex flex-col h-[98%] w-[105%] gap-5 overflow-x-hidden ">
+          <div className="flex flex-col h-[98%] md:w-[105%] gap-5 overflow-x-hidden ">
             <div className="flex flex-col gap-2  pt-2">
               Cohort Name
               <CustomInput
@@ -225,7 +225,7 @@ const CreateCohortModalStyle = {
                 min={undefined}
               />
             </div>
-            <div className="flex flex-col gap-2   pt-2">
+            <div className="flex flex-col gap-2 pt-2">
               Description
               <CustomInput
                 type={"text"}
