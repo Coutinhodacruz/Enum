@@ -62,7 +62,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps>  = ({ handleOpen, clicked,
    {/*{cohortData && cohortData.length > 0 ? (*/}
     <div className="w-[300px] md:w-full md:text-blue border ">
       <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5  md:justify-between  w-[100%]">
-        <div className="flex md:w-[400px] h-[44px] border  border-solid border-grey-100 gap-2 rounded-[7px] justify-start items-center pl-2 ">
+        <div className="flex md:w-[400px] h-[7vh] border  border-solid border-grey-100 gap-2 rounded-[7px] justify-start items-center pl-2 ">
           <LuSearch color={"#D0DCE4"} />
           <CustomInput placeHolder={"Search"} style={{ width: '360px' }}
           type={undefined} icon={undefined} value={undefined}
