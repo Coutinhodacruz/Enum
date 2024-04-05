@@ -85,7 +85,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps>  = ({ handleOpen, clicked,
         </div>
       </div>
 
-      <div className="flex flex-col mt-8 overflow-x-hidden w-3/4 md:w-[1025px] h-[250px] ">
+      <div className="flex flex-col mt-8 overflow-x-hidden w-3/4 md:w-[1025px] md:h-[450px] h-[250px] ">
 
           <div>
             {cohortData.map((item, index) => (

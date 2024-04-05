@@ -200,13 +200,14 @@ const CreateCohortModalStyle = {
         <Box sx={isSmallScreen ? SmallScreenModalStyle : CreateCohortModalStyle}>
           <div className="justify-between font-bold text-2xl">
             Create a Cohort
-            {/*<CustomButton*/}
-            {/*  text={""}*/}
-            {/*  icons={<CloseIcon />}*/}
-            {/*  onClick={closeModal}*/}
-            {/*  style={{ cursor: "pointer" }}*/}
-            {/*  isDisabled={false}*/}
-            {/*/>*/}
+            <CustomButton
+              text={""}
+              icons={<CloseIcon />}
+              onClick={closeModal}
+              style={{ cursor: "pointer" }}
+              isDisabled={false}
+            />
+
           </div>
           <div className="flex flex-col h-[98%] md:w-[105%]  gap-5 overflow-x-hidden ">
             <div className="flex flex-col gap-2  pt-2">
