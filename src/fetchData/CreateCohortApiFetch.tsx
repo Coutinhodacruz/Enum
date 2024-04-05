@@ -15,7 +15,7 @@ export const CreateCohortApi = createAsyncThunk(
           }
       });
         console.log("cohort created --->", cohortData);
-        console.log("response g--->", response)
+        console.log("response --->", response)
       return response.data;
     } catch (error) {
       return error;

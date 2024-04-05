@@ -190,6 +190,7 @@ const CreateCohortModalStyle = {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   // @ts-ignore
+  // @ts-ignore
   return (
     <div>
       <Modal
@@ -198,14 +199,14 @@ const CreateCohortModalStyle = {
         aria-describedby="modal-modal-description"
       >
         <Box sx={isSmallScreen ? SmallScreenModalStyle : CreateCohortModalStyle}>
-          <div className="justify-between font-bold text-2xl">
+          <div className="flex flex-row justify-between font-bold text-2xl">
             Create a Cohort
             <CustomButton
-              text={""}
-              icons={<CloseIcon />}
-              onClick={closeModal}
-              style={{ cursor: "pointer" }}
-              isDisabled={false}
+                text={""}
+                icons={<CloseIcon />}
+                onClick={closeModal}
+                style={{ cursor: "pointer" }}
+                isDisabled={false}
             />
 
           </div>
