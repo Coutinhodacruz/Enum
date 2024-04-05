@@ -1,4 +1,5 @@
 export const EmptySpaceStyle = {
     width:"150px",
-    hieght:"0px"
+    hieght:"0px",
+    alignItems: "center",
 }

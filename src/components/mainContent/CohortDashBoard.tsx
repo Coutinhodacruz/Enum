@@ -56,7 +56,6 @@ const CohortDashBoard: React.FC<CohortDashBoardProps>  = ({ handleOpen, clicked,
  },[] )
 
 
-  // @ts-ignore
     // @ts-ignore
     return (
     <>
