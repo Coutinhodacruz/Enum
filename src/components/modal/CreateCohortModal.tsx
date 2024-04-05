@@ -160,7 +160,7 @@ const CreateCohortModalStyle = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "35%",
+  // width: "35%",
   height: "97%",
   bgcolor: "background.paper",
   borderRadius: "10px",
@@ -173,7 +173,7 @@ const CreateCohortModalStyle = {
   top: "60%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "90%", 
+  // width: "90%",
   height: "60%", 
   bgcolor: "background.paper",
   borderRadius: "10px",
@@ -200,15 +200,15 @@ const CreateCohortModalStyle = {
         <Box sx={isSmallScreen ? SmallScreenModalStyle : CreateCohortModalStyle}>
           <div className="justify-between font-bold text-2xl">
             Create a Cohort
-            <CustomButton
-              text={""}
-              icons={<CloseIcon />}
-              onClick={closeModal}
-              style={{ cursor: "pointer" }}
-              isDisabled={false}
-            />
+            {/*<CustomButton*/}
+            {/*  text={""}*/}
+            {/*  icons={<CloseIcon />}*/}
+            {/*  onClick={closeModal}*/}
+            {/*  style={{ cursor: "pointer" }}*/}
+            {/*  isDisabled={false}*/}
+            {/*/>*/}
           </div>
-          <div className="flex flex-col h-[98%] md:w-[105%] gap-5 overflow-x-hidden ">
+          <div className="flex flex-col h-[98%] md:w-[105%]  gap-5 overflow-x-hidden ">
             <div className="flex flex-col gap-2  pt-2">
               Cohort Name
               <CustomInput
@@ -318,6 +318,7 @@ const CreateCohortModalStyle = {
               />
             </div>
           </div>
+
         </Box>
       </Modal>
     </div>

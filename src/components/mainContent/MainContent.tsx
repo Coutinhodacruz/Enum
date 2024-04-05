@@ -21,7 +21,6 @@ const MainContent: React.FC<mainComponent>  = ({ content }) => {
     setIsLearnerClicked(false);
   };
 
-  console.log(window.innerWidth)
   const cohortData = useSelector((state: RootState) => state.cohortData.cohortData);
   
   // @ts-ignore
