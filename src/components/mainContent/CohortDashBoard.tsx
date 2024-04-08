@@ -20,7 +20,10 @@ interface CohortDashBoardProps {
 
 interface CohortData {
   cohortName: string;
-  program: string;
+  programs:[{
+    id:number,
+    programName:string
+  }]
   startDate: string;
   CohortAvatarUrl: string;
 }
@@ -114,9 +117,14 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
                       {item.cohortName}
                     </div>
                     <div className="flex items-center">
-                      <span className="font-dm-sans font-medium text-base text-gray-700">
-                        {item.program ? item.program : "Product Design"}
+
+                        {item.programs.map((program,index) =>
+                            <span key={index} className="font-dm-sans font-medium text-base text-gray-700">
+                        {
+                          program.programName
+                        }
                       </span>
+                        )}
                       <FiUser className="w-4 h-4 text-gray-500 ml-10" />
                       <span className="font-#475661 font-dm sans text-sm pt-0.5 ml-2 text-gray-700">25 Learners</span>
                     </div>
