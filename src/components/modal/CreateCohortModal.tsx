@@ -210,8 +210,8 @@ const CreateCohortModalStyle = {
             />
 
           </div>
-          <div className="flex flex-col h-[98%] md:w-[105%]  gap-5 overflow-x-hidden ">
-            <div className="flex flex-col gap-2  pt-2">
+          <div className="flex flex-col h-[98%] md:w-[105%]  gap-5 overflow-x-hidden text-gray-700  ">
+            <div className="flex flex-col gap-2  pt-2 ">
               Cohort Name
               <CustomInput
                 type={"text"}
