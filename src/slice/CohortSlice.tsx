@@ -1,4 +1,3 @@
-import { AllProgramsApi } from "@/fetchData/AllPrograms";
 import { CreateCohortApi } from "@/fetchData/CreateCohortApiFetch";
 import { createSlice } from "@reduxjs/toolkit";
 

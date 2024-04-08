@@ -1,4 +1,4 @@
 export const SchoolBannerStyle ={
-    hieght:"32px",
+    height:"32px",
     width:"32px"
 }

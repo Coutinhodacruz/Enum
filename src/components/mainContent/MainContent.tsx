@@ -44,7 +44,7 @@ const MainContent: React.FC<mainComponent>  = ({ content }) => {
 
   return (
     <div className="w-62 justify-center items-center  md:w-9/12 h-[325px] md:pt-3 md:bottom-[55px] md:left-56">
-      <div className=" text-lg font-bold font-serif w-[90px] h-[31px] hidden md:block">{content}</div>
+      <div className=" text-lg font-bold font-IBM Plex Serif w-[90px] h-[31px] hidden md:block pt-3">{content}</div>
       {content === "Cohorts"  ? (
         <CohortDashBoard
           clicked={isCohortClicked}
