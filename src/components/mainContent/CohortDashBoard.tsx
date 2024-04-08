@@ -103,13 +103,12 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
                 key={index}
                 className="flex flex-row shadow-inner justify-between mb-5 p-2 h-[60px] items-center w-[1025px] border-[#F6FCF] rounded-lg ">
                 <div className="flex gap-3 justify-center items-center">
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center h-[30px] ">
                     <Picture
-                      url={item.CohortAvatarUrl}
-                      style={CohortAvatarStyle}
+                        url={item.CohortAvatarUrl}
+                        style={CohortAvatarStyle}
                     />
                   </div>
-
                   <div className="flex flex-col gap-2 ">
                     <div className="font-dm sans font-bold text-gray-700 text-lg">
                       {item.cohortName}
