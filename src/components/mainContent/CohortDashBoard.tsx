@@ -109,8 +109,8 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
               />
             </div>
           </div>
-          <div className="h-[255px]  overflow-hidden">
-          <div className="flex flex-col overflow-x-hidden mt-2 mb-[300px] w-3/4 md:w-[1070px] md:h-[215px] sm:h-[850px] "
+          <div className="">
+          <div className="flex flex-col overflow-x-hidden mt-8 w-3/4 md:w-[1070px] md:h-[215px] sm:h-[850px] "
                style={screenHeight ? { height: `calc(${screenHeight}px - 90px)` } : {}}
                // style={{ height: screenHeight ? `calc(${screenHeight}px - 90px)` : "auto", overflowY: "auto" }}
 
