@@ -12,7 +12,7 @@ const MoreActionButtonStyles ={
     border:'solid 1px grey',
     // marginRight: '0.5rem',
     // width: '148px',
-    height: '40px',
+    height: '48px',
     top: '372px',
     // left: '1133px',
     // gap: '6px',
