@@ -38,13 +38,16 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
   const [cohortData, setCohortData] = useState<CohortData[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [screenHeight, setScreenHeight] = useState<number | undefined>(undefined);
+  const [screenWidth, setScreenWidth] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setScreenHeight(window.innerHeight);
+      setScreenWidth(window.innerWidth);
 
       const handleResize = () => {
         setScreenHeight(window.innerHeight);
+        setScreenWidth(window.innerWidth);
       };
 
       window.addEventListener("resize", handleResize);
