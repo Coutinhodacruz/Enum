@@ -31,10 +31,10 @@ interface CohortData {
 }
 
 const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
-                                                           handleOpen,
-                                                           clicked,
-                                                           handleClose,
-                                                         }) => {
+ handleOpen,
+ clicked,
+ handleClose,
+}) => {
   const [cohortData, setCohortData] = useState<CohortData[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [screenHeight, setScreenHeight] = useState<number | undefined>(undefined);
