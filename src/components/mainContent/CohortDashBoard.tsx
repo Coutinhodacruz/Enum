@@ -79,11 +79,8 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
       cohort.cohortName.toLowerCase().includes(searchQuery.toLowerCase()))
   return (
       <>
-        <div
-            className="w-[300px] md:w-full md:text-blue"
-
-        >
-          <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%]">
+        <div className="w-[300px] md:w-full md:text-blue ">
+          <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%] ">
             <div className="flex md:w-[400px] sm:h-[12vh] md:h-[7vh] border border-solid border-grey-100 gap-2 rounded-[7px] justify-start items-center pl-2">
               <LuSearch color={"#D0DCE4"} />
               <input
@@ -108,12 +105,15 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
                   text={"More Actions"}
                   style={MoreActionButtonStyles}
                   isDisabled={false}
+
               />
             </div>
           </div>
 
           <div className="flex flex-col overflow-x-hidden mt-8 w-3/4 md:w-[1070px] md:h-[215px] sm:h-[850px] "
                style={screenHeight ? { height: `calc(${screenHeight}px - 90px)` } : {}}
+               // style={{ height: screenHeight ? `calc(${screenHeight}px - 90px)` : "auto", overflowY: "auto" }}
+
           >
             {filteredCohorts.length > 0 ? (
                 filteredCohorts.map((item, index) => (
@@ -126,18 +126,25 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
                           <Picture url={item.avatarImageUrl} style={CohortAvatarStyle} />
                         </div>
 
-                        <div className="flex flex-col gap-2 ">
-                          <div className="font-#1E323F font-semibold font-sans">{item.cohortName}</div>
-
-                          <div className="flex items-center">
-                            {item.programs.map((program, itemIndex) => (
-                                <span key={itemIndex} className="font-dm-sans font-medium text-base text-gray-700">
-                                                    {program.programName}
-                                                </span>
-                            ))}
-
-                            <FiUser className="w-4 h-4 text-gray-300 ml-7" />
-                            <span className="font-#475661 text-sm pt-0.5 ml-2">25 Learners</span>
+                        <div className="flex flex-col gap-1 w-full">
+                          <div className="font-DM Sans text-sm font-semibold">{item.cohortName}</div>
+                          <div className="flex items-center gap-2">
+                            <div className="flex flex-wrap gap-2 w-64">
+                              {item.programs.map((program, itemIndex) => (
+                                  <span
+                                      key={itemIndex}
+                                      className="font-medium text-sm text-gray-600 px-2 py-1 rounded-md"
+                                  >
+                            {program.programName}
+                          </span>
+                              ))}
+                            </div>
+                            <div className="flex-grow flex items-center gap-2">
+                              <FiUser className="w-4 h-4 text-gray-400" />
+                              <span className="font-medium text-sm text-gray-600">
+                          25 Learners
+                        </span>
+                            </div>
                           </div>
                         </div>
                       </div>
