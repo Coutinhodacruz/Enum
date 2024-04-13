@@ -118,7 +118,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
               filteredCohorts.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-row shadow-inner justify-between mb-5 p-2 h-[70px] items-center w-[1020px] border-[#F6FCF] rounded-lg "
+                  className="flex flex-row shadow-inner justify-between mb-5 p-2 h-[70px] items-center md:w-full md:max-w-[100%]  border-[#F6FCF] rounded-lg "
                 >
                   <div className="flex gap-3 justify-center items-center">
                     <div className="flex justify-center items-center">
