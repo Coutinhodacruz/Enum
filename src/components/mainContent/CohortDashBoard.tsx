@@ -11,6 +11,7 @@ import CreateCohortModal from "../modal/CreateCohortModal";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import MoreActionButtonStyles from "../button/buttonStyles/MoreAction";
 import CohortAvatarStyle from "@/assets/style/CohortAvatarStyle";
+import style from './style/CohortDashBoardStyle.module.css'
 
 interface CohortDashBoardProps {
   handleOpen: any;
@@ -110,7 +111,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col overflow-x-hidden mt-8  md:w-full md:max-w-[100%] md:h-56 md:max-h-screen sm:h-full"
+          <div className={`flex flex-col overflow-x-hidden mt-8  md:w-full md:max-w-[100%] md:h-56 ${style.cohortList}  sm:h-full`}
               //  style={screenHeight ? { height: `calc(${screenHeight}px - 50px)` } : {}}
               // style={{ height: screenHeight ? `calc(${screenHeight}px - 90px)` : "auto", overflowY: "auto" }}
           >
