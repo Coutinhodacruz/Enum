@@ -32,14 +32,14 @@ interface CohortData {
 }
 
 const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
-                                                           handleOpen,
-                                                           clicked,
-                                                           handleClose,
-                                                         }) => {
+  handleOpen,
+  clicked,
+  handleClose,
+}) => {
   const [cohortData, setCohortData] = useState<CohortData[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [screenHeight, setScreenHeight] = useState<number | undefined>(
-      undefined
+    undefined
   );
   const [screenWidth, setScreenWidth] = useState<number | undefined>(undefined);
 
@@ -60,14 +60,14 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
   }, []);
 
   const dataExists =
-      typeof cohortData === "object" &&
-      Object.values(cohortData).some((value) => value !== null);
+    typeof cohortData === "object" &&
+    Object.values(cohortData).some((value) => value !== null);
 
   useEffect(() => {
     const fetchCohort = async () => {
       try {
         const token =
-            "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJpc3MiOiJFbnVtIn0.aNaQX6099P1v9E67yUfxznob9bAQDWDWhEUCRgrgMKDxUMqZAEsYVIWJji3VwgrWaDrtQNNWpHjgpF8mgobEHg";
+          "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJpc3MiOiJFbnVtIn0.aNaQX6099P1v9E67yUfxznob9bAQDWDWhEUCRgrgMKDxUMqZAEsYVIWJji3VwgrWaDrtQNNWpHjgpF8mgobEHg";
         const response = await axios.get(ViewAllCohortUrl, {
           method: "GET",
           headers: {
@@ -84,103 +84,103 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
   }, []);
 
   const filteredCohorts = cohortData.filter((cohort) =>
-      cohort.cohortName.toLowerCase().includes(searchQuery.toLowerCase())
+    cohort.cohortName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
-      <>
-        <div className="w-[300px] md:w-full md:text-blue">
-          <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%]">
-            <div className="flex md:w-[400px] sm:h-[12vh] md:h-[7vh] border border-solid border-gray-100 gap-2 rounded-[7px] justify-start items-center pl-2">
-              <LuSearch color={"#D0DCE4"} />
-              <input
-                  placeholder="Search"
-                  style={{
-                    width: "360px",
-                    border: "none",
-                    outline: "none",
-                    boxShadow: "none",
-                  }}
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                      setSearchQuery(e.target.value)
-                  }
-              />
-            </div>
-
-            <div className="flex flex-row gap-4">
-              <CustomButton
-                  icons={[]}
-                  text={"Create a cohort"}
-                  style={createCohortStyles}
-                  onClick={handleOpen}
-                  isDisabled={false}
-              />
-              <CustomButton
-                  icons={[<HiOutlineDotsVertical key="dots-icon" />]}
-                  text={"More Actions"}
-                  style={MoreActionButtonStyles}
-                  isDisabled={false}
-              />
-            </div>
+    <>
+      <div className="w-[300px] md:w-full md:text-blue">
+        <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%]">
+          <div className="flex md:w-[400px] sm:h-[12vh] md:h-[7vh] border border-solid border-gray-100 gap-2 rounded-[7px] justify-start items-center pl-2">
+            <LuSearch color={"#D0DCE4"} />
+            <input
+              placeholder="Search"
+              style={{
+                width: "360px",
+                border: "none",
+                outline: "none",
+                boxShadow: "none",
+              }}
+              type="text"
+              value={searchQuery}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setSearchQuery(e.target.value)
+              }
+            />
           </div>
-          <div
-              className={`flex flex-col overflow-x-hidden md:w-full md:max-w-[100%] ${style.cohortList} sm:h-full mt-0 mb-0 ml-0 mr-0 pt-0 pb-0 pl-0 pr-0`}
-              style={{ maxHeight: 'calc(100vh - 370px)', overflowY: 'auto' }}
-          >
-            {filteredCohorts.length > 0 ? (
-                filteredCohorts.map((item, index) => (
-                    <div
-                        key={index}
-                        className="flex flex-row shadow-inner justify-between mb-5 p-2 h-[70px] items-center md:w-full md:max-w-[100%] border-[#F6FCF] rounded-lg "
-                    >
-                      <div className="flex gap-3 items-center">
-                        <div className="flex justify-center items-center">
-                          <Picture
-                              url={item.avatarImageUrl}
-                              style={CohortAvatarStyle}
-                          />
-                        </div>
-                        <div className="flex flex-col gap-1 w-full">
-                          <div className="font-DM Sans text-sm font-semibold">{item.cohortName}</div>
-                          <div className="flex items-center gap-2">
-                            <div className="flex flex-wrap w-60">
-                              {item.programs.map((program, itemIndex) => (
-                                  <span
-                                      key={itemIndex}
-                                      className="font-sm text-sm text-gray-800 py-1 rounded-md"
-                                  >
+
+          <div className="flex flex-row gap-4">
+            <CustomButton
+              icons={[]}
+              text={"Create a cohort"}
+              style={createCohortStyles}
+              onClick={handleOpen}
+              isDisabled={false}
+            />
+            <CustomButton
+              icons={[<HiOutlineDotsVertical key="dots-icon" />]}
+              text={"More Actions"}
+              style={MoreActionButtonStyles}
+              isDisabled={false}
+            />
+          </div>
+        </div>
+        <div
+          className={`flex flex-col overflow-x-hidden md:w-full md:max-w-[100%] ${style.cohortList} sm:h-full mt-0 mb-0 ml-0 mr-0 pt-0 pb-0 pl-0 pr-0`}
+          style={{ maxHeight: 'calc(100vh - 370px)', overflowY: 'auto' }}
+        >
+          {filteredCohorts.length > 0 ? (
+            filteredCohorts.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-row shadow-inner justify-between mb-5 p-2 h-[70px] items-center md:w-full md:max-w-[100%] border-[#F6FCF] rounded-lg "
+              >
+                <div className="flex gap-3 items-center">
+                  <div className="flex justify-center items-center">
+                    <Picture
+                      url={item.avatarImageUrl}
+                      style={CohortAvatarStyle}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1 w-full">
+                    <div className="font-DM Sans text-sm font-semibold">{item.cohortName}</div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap w-60">
+                        {item.programs.map((program, itemIndex) => (
+                          <span
+                            key={itemIndex}
+                            className="font-sm text-sm text-gray-800 py-1 rounded-md"
+                          >
                             {program.programName}
                           </span>
-                              ))}
-                            </div>
-                            <div className="flex-grow flex items-center gap-2">
-                              <FiUser className="w-4 h-4 text-gray-400" />
-                              <span className="font-sm text-sm text-gray-800">
+                        ))}
+                      </div>
+                      <div className="flex-grow flex items-center gap-2">
+                        <FiUser className="w-4 h-4 text-gray-400" />
+                        <span className="font-sm text-sm text-gray-800">
                           25 Learners
                         </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex justify-center items-center gap-8 pr-7 font-dm sans">
-                        <div className="flex items-center gap-2 text-sm">
-                          <div>Created</div>
-                          <div>{item.startDate}</div>
-                        </div>
-                        <HiOutlineDotsVertical />
                       </div>
                     </div>
-                ))
-            ) : (
-                <div className="text-center mt-8">No Suggestions Exist!!!</div>
-            )}
-          </div>
-
-          <CreateCohortModal isClicked={clicked} closeModal={handleClose} />
+                  </div>
+                </div>
+                <div className="flex justify-center items-center gap-8 pr-7 font-dm sans">
+                  <div className="flex items-center gap-2 text-sm">
+                    <div>Created</div>
+                    <div>{item.startDate}</div>
+                  </div>
+                  <HiOutlineDotsVertical />
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="text-center mt-8">No Suggestions Exist!!!</div>
+          )}
         </div>
-      </>
+
+        <CreateCohortModal isClicked={clicked} closeModal={handleClose} />
+      </div>
+    </>
   );
 };
 
