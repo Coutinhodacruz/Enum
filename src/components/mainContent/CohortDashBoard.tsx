@@ -80,7 +80,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
     cohort.cohortName.toLowerCase().includes(searchQuery.toLowerCase()))
   return (
     <>
-      <div className="h-full md:w-full md:text-blue ">
+      <div className="h-screen md:w-full md:text-blue ">
         <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%] ">
           <div className="flex md:w-[400px] sm:h-[12vh] md:h-[7vh] border border-solid border-grey-100 gap-2 rounded-[7px] justify-start items-center pl-2">
             <LuSearch color={"#D0DCE4"} />
