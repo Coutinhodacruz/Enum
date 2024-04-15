@@ -1,5 +1,9 @@
 .cohortList {
-  @media (min-width: 768px) {
-    max-height: calc(100vh-20px);
+  max-height: 100vh; /* Equivalent to 100% of viewport height */
+}
+
+@media (min-width: 768px) {
+  .cohortList {
+    max-height: calc(100vh - 20px); /* Subtract 20px from viewport height */
   }
 }
