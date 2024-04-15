@@ -80,7 +80,7 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
     cohort.cohortName.toLowerCase().includes(searchQuery.toLowerCase()))
   return (
     <>
-      <div className="w-[300px] md:w-full md:text-blue ">
+      <div className="h-full md:w-full md:text-blue ">
         <div className="flex pt-5 gap-5 flex-col-reverse md:flex md:flex-row mt-5 md:justify-between w-[100%] ">
           <div className="flex md:w-[400px] sm:h-[12vh] md:h-[7vh] border border-solid border-grey-100 gap-2 rounded-[7px] justify-start items-center pl-2">
             <LuSearch color={"#D0DCE4"} />
@@ -110,11 +110,12 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
             />
           </div>
         </div>
-        <div className="">
-          <div className={`flex flex-col overflow-x-hidden mt-8  md:w-full md:max-w-[100%] md:h-96 ${style.cohortList}  sm:h-full`}
-              //  style={screenHeight ? { height: `calc(${screenHeight}px - 50px)` } : {}}
-              // style={{ height: screenHeight ? `calc(${screenHeight}px - 90px)` : "auto", overflowY: "auto" }}
+        <div className="h-4/6">
+          
+          <div className={`flex flex-col overflow-x-hidden mt-8 md:w-full md:max-w-[100%] max-h-full ${style.cohortList}  sm:h-full`}
+
           >
+            
             {filteredCohorts.length > 0 ? (
               filteredCohorts.map((item, index) => (
                 <div
@@ -170,3 +171,8 @@ const CohortDashBoard: React.FC<CohortDashBoardProps> = ({
 };
 
 export default CohortDashBoard;
+
+
+
+//  style={screenHeight ? { height: `calc(${screenHeight}px - 50px)` } : {}}
+// style={{ height: screenHeight ? `calc(${screenHeight}px - 90px)` : "auto", overflowY: "auto" }}
