@@ -1,6 +1,4 @@
-.cohortList {
-  max-height: 100vh; /* Equivalent to 100% of viewport height */
-}
+
 
 @media (min-width: 768px) {
   .cohortList {
